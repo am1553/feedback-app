@@ -1,0 +1,103 @@
+@import "./font.css";
+@import "./media-queries.css";
+
+:root {
+  --purple: #ad1fea;
+  --blue: #4661e6;
+  --navy-blue: #4661e6;
+  --white: #fff;
+  --bluish-white-tint: #f2f4ff;
+  --desaturated-white: #f7f8fd;
+  --bluish-grey: #3a4374;
+  --grey: #647196;
+  --orange: #f49f85;
+  --light-blue: #62bcfa;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100vh;
+  font-family: "Jost", serif;
+}
+
+header {
+  color: var(--white);
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__container_l {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__container_l > .title {
+  font-weight: 900;
+}
+
+.menu_btn {
+  height: 2rem;
+  width: 2rem;
+  background: transparent;
+  border: none;
+  position: relative;
+  transform-origin: center;
+}
+
+.menu_btn::before,
+.menu_btn::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: var(--white);
+  left: 0;
+  right: 0;
+}
+
+.menu_btn::after {
+  top: 8px;
+}
+
+.menu_btn::before {
+  bottom: 8px;
+}
+.gradient {
+  background: linear-gradient(
+    45deg,
+    var(--light-blue, 0.6),
+    var(--blue),
+    var(--purple),
+    var(--orange)
+  );
+}
+
+.sidebar_panel {
+  background-color: var(--desaturated-white);
+  padding: 1rem;
+  width: fit-content;
+}
+
+.sidebar_panel > .sidebar_panel__card {
+  background-color: var(--white);
+  padding: 1rem;
+}
+
+.category_label {
+  padding: 0.5rem 1rem;
+  background-color: var(--desaturated-white);
+  color: var(--blue);
+}
+
+.category_label__active {
+  background-color: var(--blue);
+  color: var(--white);
+}
